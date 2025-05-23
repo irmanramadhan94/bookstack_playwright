@@ -1,0 +1,23 @@
+{
+  "name": "bookstack_playwright",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test-gui": "npx playwright test --headed",
+    "debug": "npx playwright test --debug"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/irmanramadhan94/bookstack_playwright.git"
+  },
+  "keywords": [],
+  "author": "Irman Ramadhan",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/irmanramadhan94/bookstack_playwright/issues"
+  },
+  "homepage": "https://github.com/irmanramadhan94/bookstack_playwright#readme"
+}

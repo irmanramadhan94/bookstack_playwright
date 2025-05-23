@@ -1,0 +1,140 @@
+Feature: Platform
+  Scenario: show detail features
+    Given User is logged in
+    When User clicks the "Platform" menu
+    And User selects the "Features An overview of the" submenu
+    Then User is redirected to the "Features" page
+
+  Scenario: show detail demo
+    Given User is logged in
+    When User clicks the "Platform" menu
+    And User selects the "Demo Give BookStack a test" submenu
+    Then User is redirected to the "Demo" page
+
+  Scenario: show documentation
+    Given User is logged in
+    When User clicks the "Platform" menu
+    And User selects the "Documentation Guidance for" submenu
+    Then User is redirected to the "Documentation" page
+
+  Scenario: show blog
+    Given User is logged in
+    When User clicks the "Platform" menu
+    And User selects the "Our Blog Get the latest" submenu
+    Then User is redirected to the "Blog" page
+
+  Scenario: show detail bookStack hacks
+    Given User is logged in
+    When User clicks the "Platform" menu
+    And User selects the "Hacks Unsupported hacks that" submenu
+    Then User is redirected to the "Hacks" page
+
+---
+
+Feature: Support
+  Scenario: show detail documentation page
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User selects the "Documentation Get support" submenu
+    Then User is redirected to the "Documentation" page
+
+  Scenario: show detail support plans
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User selects the "Our Support Services" submenu
+    Then User is redirected to the "Support Plans" page
+
+  Scenario: show detail donate page
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User selects the "Donate Provide financial" submenu
+    Then User is redirected to the "Donate" page
+
+  Scenario: show video on PeerTube
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User selects the "Videos on PeerTube Find our" submenu
+    Then User is redirected to the "PeerTube" page
+
+  Scenario: redirect to guide on YouTube
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User clicks the link "YouTube"
+    Then User is redirected to the "YouTube" page
+
+  Scenario: redirect to GitHub issue
+    Given User is logged in
+    When User clicks the "Support" menu
+    And User clicks the link "GitHub Issues Find or report"
+    Then User is redirected to the "GitHub Issues" page
+
+---
+
+Feature: Search Functionality
+  Scenario: Search book available
+    Given User opens the home page
+    When User enters "hacking bookstack" in the searchbox
+    And User selects the result "Hacking BookStack"
+    Then User is redirected to the "Hacking BookStack" page
+
+  Scenario: Search book not available
+    Given User opens the home page
+    When User enters "lorem ipsum dolor sit amet" and "1212312312" in the searchbox and presses Enter
+    Then User sees a "No results found" message
+
+---
+
+Feature: Github Project
+  Scenario: Redirect to GitHub
+    Given User opens the home page
+    When User clicks the "GitHub" link
+    Then User is redirected to the "GitHub" page
+
+  Scenario: Show detail BookStack demo
+    Given User opens the home page
+    When User clicks the "Demo" link
+    Then User is redirected to the "Demo" page
+
+  Scenario: Show detail BookStack install
+    Given User opens the home page
+    When User clicks the "Install" link
+    Then User is redirected to the "Installation" page
+
+---
+
+Feature: Community Page Navigation
+  Scenario: Redirect to GitHub project
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "GitHub Star the project on" link
+    Then User is redirected to the "GitHub" page
+
+  Scenario: Redirect to Codeberg page
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "Codeberg Watch development" link
+    Then User is redirected to the "Codeberg" page
+
+  Scenario: Redirect to Discord page
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "Discord Chat with the" link
+    Then User is redirected to the "Discord" page
+
+  Scenario: Redirect to Mastodon page
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "Mastodon Follow the project" link
+    Then User is redirected to the "Mastodon" page
+
+  Scenario: Redirect to YouTube channel
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "YouTube Watch and comment on" link
+    Then User is redirected to the "YouTube" page
+
+  Scenario: Go to Blog page
+    Given User opens the home page
+    When User clicks the "Community" link
+    And User clicks the "Our Blog Keep up with the" link
+    Then User is redirected to the "Blog" page
