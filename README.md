@@ -86,11 +86,3 @@ If you encounter any issues:
 2. Check if the BookStack application is accessible
 3. Verify your network connection
 4. Try running tests in debug mode for detailed logs
-
-## Contributing
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Create a Pull Request
